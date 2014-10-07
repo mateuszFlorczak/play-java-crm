@@ -1,12 +1,11 @@
 package models;
 
-import play.data.validation.Constraints.*;
-//import play.db.ebean.Model;
+import play.data.validation.Constraints.MaxLength;
+import play.data.validation.Constraints.Required;
 
 import javax.persistence.*;
 
-import play.data.validation.Constraints.MaxLength;
-import play.data.validation.Constraints.Required;
+//import play.db.ebean.Model;
 //import play.utils.dao.BasicModel;
 
 /**
@@ -20,7 +19,7 @@ public class Contact{
     private long key;
 
     @ManyToOne
-    private User user;
+    private MyUser user;
 
     @Basic
     @Required

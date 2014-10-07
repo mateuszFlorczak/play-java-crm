@@ -13,9 +13,7 @@ public class Application extends Controller {
         return ok(index.render("Home"));
     }
     public static Result login() {
-        return ok(
-                login.render(form(Login.class))
-        );
+        return ok(login.render(form(Login.class)));
     }
     public static class Login {
 

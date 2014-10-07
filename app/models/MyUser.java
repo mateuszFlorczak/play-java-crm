@@ -1,21 +1,22 @@
 package models;
 
 import org.hibernate.validator.constraints.Email;
-import play.data.validation.Constraints.Pattern;
-//import play.db.ebean.Model;
 import play.data.validation.Constraints.MaxLength;
+import play.data.validation.Constraints.Pattern;
 import play.data.validation.Constraints.Required;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+
+//import play.db.ebean.Model;
 
 /**
  * Created by keen on 10/7/14.
  */
 
 @Entity
-public class User{
+public class MyUser{
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -38,7 +39,7 @@ public class User{
     @OneToMany(targetEntity=Contact.class, mappedBy="user")
     public Collection contacts;
 
-    public User(String email, String name, String password) {
+    public MyUser(String email, String name, String password) {
         this.email = email;
         this.name = name;
         this.password = password;
